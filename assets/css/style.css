@@ -1,0 +1,455 @@
+/* Table Of Content */
+
+
+/*
+1. Section Settings
+2. Section Carousel
+3. Section Blog
+4. Section Footer
+5. Section Navbar
+6. Section Page-title
+7. Section timeline
+8. Section Star
+9. Section On to Top
+10. Section jumbotron
+_______________________
+
+/* Coolors Exported Palette - coolors.co/dddddc-230c00-745305-d99a10-ffe133 */
+
+
+/* Section Settings */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Prompt', sans-serif;
+}
+
+.bg-alpha {
+    background: hsla(284, 79%, 24%)
+    /* background: hsl(42, 92%, 24%, 0.90) */
+}
+
+.border-short-bottom {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 25px;
+}
+
+.border-short-bottom::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+    background: #595959;
+}
+
+@media (max-width: 768px) {
+    /* แก้ Card เพี้ยนใน Browser อื่น */
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Section Carousel */
+
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-inner .active {
+    height: 100%;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    top: 75%;
+}
+
+.backscreen {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+
+/* @media only screen and (max-width: 576px) {             
+    .navbar-toggler {
+        width: 100%;
+    }
+  } */
+
+
+/* Section Blog */
+
+p.card-text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    height: 120px !important;
+    overflow: hidden !important;
+}
+
+.warpper-card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.warpper-card-img::after {
+    content: '';
+    padding-top: 56.25%;
+    display: block;
+    height: 0;
+}
+
+.warpper-card-img img {
+    position: absolute;
+    top: 0;
+    transition: 1s;
+}
+
+.warpper-card-img img:hover {
+    transform: scale(1.2)
+}
+
+.original {
+    height: auto;
+    /* 105px */
+    width: auto;
+    /* 135px */
+    margin: auto auto;
+    margin-top: 20px;
+    display: block;
+}
+
+.btn-group-custom button {
+    /* button หน้า blog */
+    /* width: 100px; */
+    margin-bottom: 0.5rem;
+}
+
+.btn-group-custom a:hover {
+    text-decoration: none;
+}
+
+.blog-image {
+    /* parallax หน้า blog-detail*/
+    padding: 200px 0px 120px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.blog-content {
+    padding: 50px 100px;
+    box-shadow: 0px 0px 10px #595959;
+}
+
+.owl-carousel .card-body {
+    /* card-bod อยู่ภายใต้ owl-carousel */
+    height: 150px;
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .blog-content {
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-content {
+        padding: 20px 30px;
+    }
+}
+
+
+/* Section Footer */
+
+.semi-footer {
+    background: #5c4104;
+    color: azure;
+}
+
+.semi-footer a {
+    color: #ffffff;
+}
+
+.semi-footer li.active>a {
+    color: #ffe133;
+}
+
+.semi-footer h4 {
+    color: #EAF6FF;
+    border-bottom: 1px solid;
+    padding: 10px 0;
+    /* margin-top: 2px; */
+}
+
+.footer {
+    background: hsla(284, 79%, 24%);
+    color: #EAF6FF;
+    font-size: 0.8rem;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+/* #map {
+    height: 300px;
+    width: 100%;
+} */
+
+
+/* .google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+} */
+
+.title-name {
+    font-size: 1.4rem;
+    padding-left: 0%;
+}
+
+@media only screen and (max-width: 576px) {
+    .title-name {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+
+/* Section Navbar */
+
+#navbar {
+    padding: 25px;
+    transition: 0.5s;
+}
+
+
+/* Section Page-title */
+
+.page-title {
+    position: relative;
+    display: block;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    color: hsla(46, 100%, 62%);
+    text-shadow: #e42de4 0.1em 0.1em 0.2em;
+}
+
+
+/* Section timeline */
+
+.timeline {
+    list-style: none;
+    /* เอาจุดจาก ul ออก*/
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline>li {
+    position: relative;
+    /* อยู่ในกรอบ ไม่ให้เกินกรอบ */
+    margin-bottom: 40px;
+}
+
+.timeline::before {
+    /* ต้องมี (เป็นค่าว่าง) */
+    content: "";
+    width: 2px;
+    /* ความยาวเส้น */
+    background: #dedcdc;
+    position: absolute;
+    /* อยู่ตรงไหนก็ได้ */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    /* วัตถุเป็น absolute ต้องติดกลับไปจาก width ครึ่งนึง */
+}
+
+li>.timeline-badge {
+    /* ชี้ timeline-badge อยู่ภายใต้ li*/
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border: 3px solid #69b769;
+    left: 50%;
+    margin-left: -9px;
+    /* วัตถุเป็น absolute ต้องติดกลับไปจาก width ครึ่งนึง */
+    border-radius: 50%;
+    /* มุม ทำสี่เหลี่ยมให้เป็นวงกลม */
+    background: #ffffff;
+    box-shadow: 0 0 0 5px #ffffff;
+    /* เงาวัตถุ */
+    top: 15px;
+}
+
+li>.timeline-badge::before {
+    content: "";
+    /* ใช้ before, after ต้องมี content เสมอ */
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 25px;
+    height: 2px;
+    background: #595959;
+}
+
+
+/* ตัวที่มี inverted คือ สลับข้าง timelime */
+
+li.inverted>.timeline-badge::before {
+    right: -32px;
+}
+
+li>.timeline-badge p {
+    width: 200px;
+    margin-top: -9px;
+    margin-left: 25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+li.inverted>.timeline-badge p {
+    float: right;
+    text-align: right;
+    margin-right: 25px;
+}
+
+li>.timeline-card {
+    width: 46%;
+    float: left;
+    /* ลอยไปชิดซ้าย */
+    text-align: right;
+    padding: 0 10 px;
+    position: relative;
+}
+
+li.inverted>.timeline-card {
+    float: right;
+    text-align: left;
+}
+
+.timeline>li::after {
+    /* เคลีย both ให้ขึ้นบรรทัดใหม่ */
+    content: "";
+    clear: both;
+    /* เคลียซ้าย ขวา */
+    display: block;
+    /* ให้ขึ้นบรรทัดใหม่ */
+}
+
+.timeline-arrow {
+    /*  ลูกศรชี้ลงตรงเส้นท้ายสุดของ timeline */
+    width: 100%;
+    text-align: center;
+    bottom: -70px;
+    color: #e6e6e6;
+}
+
+@media (max-width: 768px) {
+    .timeline::before,
+    .timeline-badge {
+        left: 40px !important;
+    }
+    .timeline-badge::before {
+        right: -32px !important;
+    }
+    .timeline-badge p,
+    li.inverted>.timeline-badge p {
+        margin-left: 50px !important;
+        text-align: left;
+        float: left;
+    }
+    li>.timeline-card {
+        width: 100%;
+        text-align: left;
+        padding: 37px 0 0 85px;
+    }
+    .timeline-arrow {
+        text-align: left;
+        left: 0;
+    }
+    .timeline-arrow>i {
+        /* ทำให้ลูกศรอยู่ตรงเส้น responsive */
+        margin-left: 32px;
+    }
+}
+
+
+/* Section Star */
+
+
+/* ☆★ */
+
+.star-rating {
+    position: relative;
+    font-size: 2em;
+    color: gold;
+    display: inline-block;
+}
+
+.star-current {
+    position: absolute;
+    /* จะอยู่ภายใต้ relative */
+    top: 0;
+    white-space: nowrap;
+    /* ให้เป็นเส้นตรงบรรทัดเดียว */
+    overflow: hidden;
+    /* ซ่อนคำ */
+}
+
+
+/* Section On to Top */
+
+.to-top {
+    position: fixed;
+    /* อยู่กับที่ */
+    bottom: 2%;
+    right: 2%;
+    background: hsla(347, 83%, 60%);
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    z-index: 9999;
+    /* ให้อยู่เลเยอร์บนสุด */
+    border-radius: 50%;
+    /* กรอบมน 50% */
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.to-top:hover {
+    color: #ffffff;
+    background: rgb(238, 44, 86);
+}
+
+
+/* Section jumbotron */
+
+.bg-color {
+    background: #f5f4ed;
+}
